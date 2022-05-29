@@ -1,0 +1,43 @@
+
+   <div *ngIf="isNewItem" class="additem">
+    <form class="form form-inline" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+      <div class="grid-container">
+        <div class="input1">
+        <input type="number" required class="inputbox" name="amount" placeholder=" Amount" [ngModel]="item.amount">
+      </div>
+      <div class="input">
+      <input class="desc" type="text" required class="inputbox" name="description" placeholder=" Description" [ngModel]="item.description">
+    </div>
+      <div class="input2">
+        <ion-button class="button" type="submit" ngClass="{ is-primary: isNewItem, 'is-success': !isNewItem}" [disabled]="!itemForm.valid">
+          <div *ngIf="isNewItem">Submit</div>
+          <div *ngIf="!isNewItem"><ion-icon name="checkmark-outline"></ion-icon></div>
+        </ion-button>
+      </div>
+    </div>
+    </form>
+  </div>
+  
+  
+  
+  
+  <div *ngIf="!isNewItem" class="additem">
+    <form class="form form-inline" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+      <div class="grid-container">
+        <div class="input1">
+        <input type="number" required class="inputbox" name="amount" placeholder="New Amount" [ngModel]="item.amount">
+      </div>
+      <div class="input">
+      <input class="desc" type="text" required class="inputbox" name="description" placeholder=" Description" [ngModel]="item.description">
+    </div>
+      <div class="input2">
+        <ion-button class="button" type="submit" ngClass="{ is-primary: isNewItem, 'is-success': !isNewItem}" [disabled]="!itemForm.valid">
+          <div>Apply</div>
+        </ion-button>
+      </div>
+    </div>
+    </form>
+  </div>
+
+
+

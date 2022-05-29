@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+
+  <ion-content class="content">
+    <ion-title routerLink="angular" class="budget">
+      <h2>EU {{ this.dataService.totalBudget }}</h2>
+    </ion-title>
+
+    <ion-title class="title">Top Cryptocurrencies</ion-title>
+  
+  <div class="container">
+      <ion-list *ngFor="let friend of friends">
+          <ion-item color="#000000">
+              <h3 class="num">{{ friend.rank }}</h3>  
+              <h5 class="crypto">{{ friend.name }}</h5> 
+              <h5 class="price">{{friend.price}}</h5>
+          </ion-item>
+      </ion-list>
+    </div>
+
+    <ion-fab vertical="bottom" slot="fixed" class="button">
+      <ion-button class="closebutton" (click)="close()">close</ion-button>
+    </ion-fab> 
+
+</ion-content>
+
+

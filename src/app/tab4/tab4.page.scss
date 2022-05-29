@@ -1,0 +1,94 @@
+.budget{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #18181B;
+    text-align: center;
+
+    h1{
+        font-family: 'Open Sans';
+        font-size: 12px;
+        color: white;
+        font-weight: 400;
+    }
+
+    h2{
+        font-family: 'Open Sans';
+        font-size: 25px;
+        color: white;
+        font-weight: 600;
+    }
+
+}
+
+.title{
+    background-color: #18181B;
+    color: rgb(230, 230, 230);
+    padding-left: 5%;
+    padding-top: 40px;
+    font-family: 'Open sans';
+    font-size: 17px;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 105%;
+    background-color: #18181B;
+
+    .button{
+        text-align: center;
+        background-color: #78E6D4;
+        margin-left: 45%;
+        width: 60px;
+        height: 40px;
+        color: white;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    h3{
+        color: white;
+    }
+
+    h5{
+        color: white;
+    }
+
+    ion-list{
+        background-color: #18181B;
+        padding: 4%;
+        padding-top: 20px;
+    }
+
+}
+
+.button{
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  
+
+    .closebutton{
+        height: 36px;
+    }
+}
+
+ion-item{
+    background-color: #232329;
+    border-radius: 14px;
+    height: 90px;
+    color: #232329;
+    padding-top: 17px;
+    font-family: Open sans;
+
+    .crypto{
+        padding-left: 20px;
+    }
+
+    .price{
+        padding-left: 100px;
+    }
+}
+
+
+

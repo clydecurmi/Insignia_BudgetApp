@@ -1,0 +1,384 @@
+.content{
+    background-color: #18181B;
+}
+
+.addbutton{
+    background-color: #FB7449;
+}
+
+.budget{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #18181B;
+    text-align: center;
+
+    h1{
+        font-family: 'Open Sans';
+        font-size: 12px;
+        color: white;
+        font-weight: 400;
+    }
+
+    h2{
+        font-family: 'Open Sans';
+        font-size: 25px;
+        color: white;
+        font-weight: 600;
+    }
+
+}
+
+.incomeandexpenses{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #18181B;
+    padding: 4%;
+    grid-column-gap: 10px;
+
+    .column{
+        background-color: #232329;
+        width: 95%;
+        height: 200px;
+        border-radius: 14px;
+
+        .thumbsicon{
+            padding: 13%;
+
+        .thumbsdown{
+            padding: 4%;
+            font-size: 18px;
+            color: #FB7449;
+            border: 2px solid #FB7449;
+            border-radius: 20px;
+        }
+
+        .thumbsup{
+            padding: 4%;
+            font-size: 18px;
+            color: #78E6D4;
+            border: 2px solid #78E6D4;
+            border-radius: 20px;
+        }
+
+        .expenditures{
+            padding-top: 15px;
+            font-size: 11px;
+            font-family: Open sans;
+            color: #899592;
+        }
+
+        .total{
+            padding-top: 8px;
+            font-size: 16px;
+            font-family: Open sans;
+            font-weight: bold;
+            color: white;
+        }
+
+        .amount{
+            padding-top: 2px;
+            font-size: 16px;
+            font-family: Open sans;
+            font-weight: bold;
+            color: white;
+        }
+
+        .expensesamount{
+            padding-top: 15px;
+            font-size: 16px;
+            font-family: Open sans;
+            color: #FB7449;
+        }
+
+        .incomeamount{
+            padding-top: 15px;
+            font-size: 16px;
+            font-family: Open sans;
+            color: #78E6D4;
+        }
+    
+        
+        }
+    }
+}
+
+.incomeexpenses{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #18181B;
+    font-size: 13px;
+    color: white;
+    margin: 0px;
+    column-gap: 4px;
+
+    .blue{
+        text-align: right;
+        color: #78E6D4;
+    }
+
+    .red{
+        text-align: right;
+        color: #FE4A4A;
+    }
+}
+
+ion-text{
+    background-color: #18181B;
+    width: 100%;
+}
+
+.progresssection{
+    padding: 4%;
+    background-color: #18181B;
+    display: grid;
+    height: 350px;
+
+  .bars{
+      height: 10px;
+      background-color: #232329;
+      border-radius: 14px;
+      height: 90px;
+      padding: 6%;
+      display: grid;
+      grid-template-columns: 1% 99%;
+     
+
+      .progressicon{
+          border: 2px solid rgb(236, 236, 236);
+          width: 50px;
+          height: 50px;
+          border-radius: 14px;
+          color: rgb(236, 236, 236);
+          font-weight: bold;
+
+          .textdiv{
+            text-align: center;
+            padding-top: 15px;
+            }
+
+            .textdiv2{
+                text-align: center;
+                padding-top: 9px;
+    
+                    .checkmark{
+                        font-size: 30px;
+                    }
+            
+          }
+      }
+
+    .barstext{
+        color: white;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        padding-left: 70px;
+        display: grid;
+        grid-template-columns: 39% 61%;
+    }
+
+    .barstext2{
+        color: white;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        padding-left: 70px;
+        display: grid;
+        grid-template-columns: 42% 58%;
+    }
+
+    .barstext3{
+        color: white;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        padding-left: 70px;
+        display: grid;
+        grid-template-columns: 36% 64%;
+    }
+
+    .projectedNumber{
+        color: #a7a7a7;
+    }
+
+    .progressbar{
+        width: 100%;
+        text-align: center;
+        padding: 5%;
+        padding-left: 70px;
+    }
+    
+
+    ion-progress-bar {
+        height: 6px;
+        border-radius: 20px;
+      }
+  }
+}
+
+  .add-item-section{
+      background-color: #18181B;
+      padding: 4%;
+
+      .add-item-container{
+        background-color: #232329;
+        border-radius: 14px;
+      }
+  }
+
+.progresssection{
+    position: relative;
+
+ion-progress-bar{
+
+    --progress-background: #78E6D4;
+    --buffer-background: #36655d;
+ }
+
+ progress{
+     width: 100%;
+     accent-color: #78E6D4;
+ }
+
+ &:hover{
+    .inputProgress{
+        display: block;
+            opacity: 1;
+            transform: scale(1);
+    }
+ }
+
+}
+
+
+.title{
+    background-color: #18181B;
+    color: rgb(230, 230, 230);
+    padding-left: 5%;
+    padding-top: 40px;
+    padding-bottom: 7px;
+    font-family: 'Open sans';
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.projectedTitle{
+    background-color: #18181B;
+    color: rgb(230, 230, 230);
+    font-family: 'Open sans';
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.goalsdiv{
+    display: grid;
+    grid-template-columns: 89% 11%;
+    background-color: #6acdbd;
+    padding-left: 5%;
+    padding-top: 40px;
+    padding-bottom: 7px;
+    background-color: #18181B;
+
+    .view{
+        color: #6acdbd;
+        font-family: 'Open sans';
+        font-size: 22px;
+        text-decoration: none;
+    }
+}
+
+.inputProgress{
+    background-color: #18181B;
+    color: white;
+    padding-top: 4%;
+    display: none;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    .progresstext{
+        color: white;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        padding-left: 20px;
+    }
+
+    .progress{
+        background-color: #232329;
+        border-radius: 14px;
+        width: 100%;
+        height: 110px;
+        padding: 4%;
+
+        .inputdiv{
+            padding-left: 4%;
+        }
+
+        .inputbox{
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #E8F0FE;
+            color: black;
+            }
+
+            .progressButton{
+                height: 30px;
+                width: 12%;
+                background-color: #6acdbd;
+                color: white;
+                text-align: center;
+                border-radius: 5px;
+                padding-top: 7px;
+                margin-left: 20px;
+            }
+
+    }
+}
+
+
+
+.progresssection1{
+    padding: 4%;
+    background-color: #18181B;
+    padding-top: 10px;
+    vertical-align: middle;
+
+  .bars1{
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      border-radius: 14px;
+      height: 120px;
+      padding: 3%;
+      background-color: #232329;
+
+      .trophy1{
+          width: 70px;
+          height: 70px;
+          text-align: center;
+      }
+
+    .barstext1{
+        color: white;
+        font-size: 15px;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        padding-left: 26px;
+        padding-top: 12px;
+    }
+
+    .description1{
+        color: #899592;
+        padding-left: 26px;
+        padding-top: 9px;
+        font-size: 14px;
+    }
+
+    .progress1{
+        padding-left: 40px;
+        padding-top: 40px;
+        color: white;
+    }
+  }
+}
+
+.alertBox .alert-wrapper{
+    color: blue;
+  }

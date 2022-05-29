@@ -1,0 +1,192 @@
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="showModal()"><ion-icon name="logo-usd"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-button (click)="showGoalsModal()"><ion-icon name="stats-chart"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-content class="content">
+  <div class="background">
+  <ion-title class="budget">
+    <ion-title routerLink="angular" class="budget">
+      <h2>EU {{ this.dataService.totalBudget }}</h2>
+    </ion-title>
+  </ion-title>
+
+   <!-- <div class="grid-container">
+
+    <div class="items"><img style="width: 85px; padding-top: 50px;" class="insigniaimages" src="../../assets/Templar.png" class="logo"><div class="text">Templar</div></div>
+    <div class="items"><img style="width: 80px; padding-top: 38px;" class="insigniaimages" src="../../assets/Templar 1st Class.png" class="logo"><div class="text">1st Class</div></div>
+    <div class="items"><img style="width: 80px; padding-top: 50px;" class="insigniaimages" src="../../assets/Officer.png" class="logo"><div class="text">Officer</div></div>
+    <div class="items"><img style="width: 80px; padding-top: 52px;" class="insigniaimages" src="../../assets/Commander.png" class="logo"><div class="text">Commander</div></div>
+    <div class="items"><img style="width: 65px; padding-top: 38px;" class="insigniaimages" src="../../assets/GrandCross.png" class="logo"><div class="text">Grand Cross</div></div>
+    <div class="items"><img style="width: 85px; padding-top: 48px;" class="insigniaimages" src="../../assets/Legend.png" class="logo"><div class="text">Legend</div></div>
+
+  </div>  -->
+
+  
+  
+  <div class="title">Insignia Tiers</div>
+  <section class="progresssection1">
+    <div class="bars1">
+      <div class="trophy1">
+      <img style="width: 65px; padding-top: 15px;" class="insigniaimages" src="../../assets/Templar.png" class="logo">
+      </div>
+      <div class="percentage1">
+      <section class="barstext1">Templar</section>
+      <div class="description1">First step into Insignia! A member of the knights templar. </div>
+    </div>
+    <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+    </div>
+    </section>
+
+    <section class="progresssection1">
+      <div *ngIf="this.dataService.totalBudget<100" class="bars1" style="opacity: 0.3;">
+        <div class="trophy1">
+        <img style="width: 65px; padding-top: 8px;" class="insigniaimages" src="../../assets/Templar 1st Class.png" class="logo">
+        </div>
+        <div class="percentage1">
+        <section class="barstext1">Templar 1st Class</section>
+        <div class="description1">€{{ this.dataService.totalBudget }}/€100 </div>
+        <div class="progressbar">
+          <progress [value]="this.dataService.totalBudget" max="100"></progress>
+        </div>
+      </div>
+      <div class="progress1"><ion-icon name="lock-closed-outline" style="font-size: 25px; color: white;"></ion-icon></div>
+      </div>
+
+      <div *ngIf="this.dataService.totalBudget>=100" class="bars1">
+        <div class="trophy1">
+        <img style="width: 65px; padding-top: 8px;" class="insigniaimages" src="../../assets/Templar 1st Class.png" class="logo">
+        </div>
+        <div class="percentage1">
+        <section class="barstext1">Templar 1st Class</section>
+        <div class="description1">Ranking Up! Only those from noble families could become noble kights. </div>
+      </div>
+      <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+      </div>
+  
+      </section>
+
+      <section class="progresssection1">
+        <div *ngIf="this.dataService.totalBudget<500" class="bars1" style="opacity: 0.3;">
+          <div class="trophy1">
+          <img style="width: 55px; padding-top: 18px;" class="insigniaimages" src="../../assets/Officer.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Officer</section>
+          <div class="description1">€{{ this.dataService.totalBudget }}/€500 </div>
+          <div class="progressbar">
+            <progress [value]="this.dataService.totalBudget" max="500"></progress>
+          </div>
+        </div>
+        <div class="progress1"><ion-icon name="lock-closed-outline" style="font-size: 25px; color: white;"></ion-icon></div>
+        </div>
+
+        <div *ngIf="this.dataService.totalBudget>=500" class="bars1">
+          <div class="trophy1">
+          <img style="width: 55px; padding-top: 18px;" class="insigniaimages" src="../../assets/Officer.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Officer</section>
+          <div class="description1">You now hold a position of authority, especially one with a commission! </div>
+        </div>
+        <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+        </div>
+    
+      </section>
+
+      <section class="progresssection1">
+        <div *ngIf="this.dataService.totalBudget<1000" class="bars1" style="opacity: 0.3;">
+          <div class="trophy1">
+          <img style="width: 57px; padding-top: 17px;" class="insigniaimages" src="../../assets/Commander.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Commander</section>
+          <div class="description1">€{{ this.dataService.totalBudget }}/€1,000</div>
+          <div class="progressbar">
+            <progress [value]="this.dataService.totalBudget" max="1000"></progress>
+          </div>
+        </div>
+        <div class="progress1"><ion-icon name="lock-closed-outline" style="font-size: 25px; color: white;"></ion-icon></div>
+        </div>
+    
+
+        <div *ngIf="this.dataService.totalBudget>=1000" class="bars1">
+          <div class="trophy1">
+          <img style="width: 57px; padding-top: 17px;" class="insigniaimages" src="../../assets/Commander.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Commander</section>
+          <div class="description1">Second most senior grade of seven orders of chivalry. Impressive!</div>
+        </div>
+        <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+        </div>
+    
+    
+      </section>
+
+      <section class="progresssection1">
+        <div *ngIf="this.dataService.totalBudget<10000" class="bars1" style="opacity: 0.3;">
+          <div class="trophy1">
+          <img style="width: 48px; padding-top: 14px;" class="insigniaimages" src="../../assets/GrandCross.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Grand Cross</section>
+          <div class="description1">€{{ this.dataService.totalBudget }}/€10,000</div>
+          <div class="progressbar">
+            <progress [value]="this.dataService.totalBudget" max="10000"></progress>
+          </div>
+        </div>
+        <div class="progress1"><ion-icon name="lock-closed-outline" style="font-size: 25px; color: white;"></ion-icon></div>
+        </div>
+
+        <div *ngIf="this.dataService.totalBudget>=10000 && this.dataService.totalBudget<100000" class="bars1">
+          <div class="trophy1">
+          <img style="width: 48px; padding-top: 14px;" class="insigniaimages" src="../../assets/GrandCross.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Grand Cross</section>
+          <div class="description1">Leader of the knights chivalry. Highest rank in Insignia!</div>
+        </div>
+        <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+        </div>
+      </section>
+
+      <section class="progresssection1">
+        <div *ngIf="this.dataService.totalBudget<100000" class="bars1" style="opacity: 0.3">
+          <div class="trophy1">
+          <img style="width: 60px; padding-top: 15px;" class="insigniaimages" src="../../assets/Legend.png" class="logo">
+          </div>
+          <div class="percentage1">
+          <section class="barstext1">Legend</section>
+          <div class="description1">€{{ this.dataService.totalBudget }}/€100,000</div>
+          <div class="progressbar">
+            <progress [value]="this.dataService.totalBudget" max="100000"></progress>
+          </div>
+        </div>
+        <div class="progress1"><ion-icon name="lock-closed-outline" style="font-size: 25px; color: white;"></ion-icon></div>
+      </div>    
+
+      <div *ngIf="this.dataService.totalBudget>=100000" class="bars1">
+        <div class="trophy1">
+        <img style="width: 60px; padding-top: 15px;" class="insigniaimages" src="../../assets/Legend.png" class="logo">
+        </div>
+        <div class="percentage1">
+        <section class="barstext1">Legend</section>
+        <div class="description1">One and only living notorious legend. Admired by a lot!</div>
+      </div>
+      <div class="progress1"><ion-icon name="checkbox-outline" style="font-size: 25px; color: #6acdbd;"></ion-icon></div>
+      </div>  
+      </section>
+    
+</div>
+  </ion-content>
+
+
+  

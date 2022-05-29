@@ -1,0 +1,21 @@
+<div class="content">
+    <ion-title routerLink="angular" class="budget">
+      <h2>EU {{ this.dataService.totalBudget }}</h2>
+    </ion-title>
+
+    
+    <div class="title">New Transaction</div>
+  <section class="add-item-section">
+    <div class="add-item-container">
+      <app-add-item-form style="padding: 20px;" (formSubmit)="this.dataService.addItem($event)"></app-add-item-form>
+      
+    </div>
+    
+  </section>
+
+  <div class="button">
+    <ion-button class="closebutton" (click)="close()">close</ion-button>
+    </div> 
+</div>
+
+

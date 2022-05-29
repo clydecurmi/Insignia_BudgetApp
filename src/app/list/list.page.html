@@ -1,0 +1,20 @@
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="showModal()"><ion-icon name="logo-usd"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-button (click)="showGoalsModal()"><ion-icon name="stats-chart"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-content class="content">
+  <ion-title routerLink="angular" class="budget">
+    <h2>EU {{ this.dataService.totalBudget }}</h2>
+  </ion-title>
+
+  <app-budget-item-list [budgetItems]="this.dataService.budgetItems" (delete)="dataService.deleteItem($event)" (update)="this.dataService.updateItem($event)"></app-budget-item-list>
+
+</ion-content>
